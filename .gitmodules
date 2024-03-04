@@ -1,0 +1,6 @@
+[submodule "snake_app_v2"]
+	path = snake_app_v2
+	url = https://github.com/RJW20/snake_app_v2.git
+[submodule "genetic_algorithm_template"]
+	path = genetic_algorithm_template
+	url = https://github.com/RJW20/genetic_algorithm_template.git
