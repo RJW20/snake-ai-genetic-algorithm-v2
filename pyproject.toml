@@ -15,6 +15,7 @@ snake_app = { path = "snake_app_v2/", develop = true }
 
 [tool.poetry.scripts]
 main = "snake_ai.main:main"
+playback = "snake_ai.playback:playback"
 
 [build-system]
 requires = ["poetry-core"]
