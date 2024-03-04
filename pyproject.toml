@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "snake-ai"
+version = "0.1.0"
+description = "Application of the Genetic Algorithm to the game Snake."
+authors = ["RJW20"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^1.26.4"
+pygame = "^2.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
