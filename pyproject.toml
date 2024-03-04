@@ -13,6 +13,8 @@ pygame = "^2.5.2"
 genetic_algorithm = { path = "genetic_algorithm_template/", develop = true }
 snake_app = { path = "snake_app_v2/", develop = true }
 
+[tool.poetry.scripts]
+main = "snake_ai.main:main"
 
 [build-system]
 requires = ["poetry-core"]
