@@ -61,7 +61,7 @@ class Player(Snake, BasePlayer):
             search_position = search_position + search_vector
             distance += 1
 
-        return food_found, tuple(dist_to_wall, dist_to_food, dist_to_body)
+        return food_found, (dist_to_wall, dist_to_food, dist_to_body)
 
     def look(self) -> None:
         """Set the snakes vision and tail direction.
@@ -72,7 +72,7 @@ class Player(Snake, BasePlayer):
         food_found = False
         search_directions = ((0,-1), (1,-1), (1,0), (1,1), (0,1), (-1,1), (-1,0), (-1,-1))
         for i, direction in enumerate(search_directions):
-            food_found, vision = self.look_in_direction(Vector(direction), food_found)
+            food_found, vision = self.look_in_direction(Vector(*direction), food_found)
             self.vision[:, i] = np.array(vision)
 
         self.tail_direction = Direction(self.body[-2] - self.body[-1])
