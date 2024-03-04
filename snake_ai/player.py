@@ -71,8 +71,8 @@ class Player(Snake, BasePlayer):
 
         food_found = False
         search_directions = ((0,-1), (1,-1), (1,0), (1,1), (0,1), (-1,1), (-1,0), (-1,-1))
-        for i, slope in enumerate(search_directions):
-            food_found, vision = self.look_in_direction(slope, food_found)
+        for i, direction in enumerate(search_directions):
+            food_found, vision = self.look_in_direction(Vector(direction), food_found)
             self.vision[:, i] = np.array(vision)
 
         self.tail_direction = Direction(self.body[-2] - self.body[-1])
