@@ -35,13 +35,6 @@ genetic_algorithm_settings = {
 }
 
 
-simulation_settings = {
-
-    'lifespan': 1,
-
-}
-
-
 playback_settings = {
 
     #grid properties
