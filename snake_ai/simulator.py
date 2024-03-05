@@ -49,6 +49,5 @@ def simulate(player: Player) -> Player:
             break
         
     player.best_score = player.score
-
     player.fitness = calculate_fitness(player.score, age, longest_edge)
     return player
