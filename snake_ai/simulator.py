@@ -36,6 +36,9 @@ def simulate(player: Player) -> Player:
         move = player.think()
         player.move(move)
 
+        if player.score == player.max_score:
+            break
+
         #increase time_since_eaten
         if player.score == current_score:
             time_since_eaten += 1

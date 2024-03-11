@@ -13,10 +13,10 @@ genetic_algorithm_settings = {
 
     #population properties
     'population_size': 1500,                    #number of players in the population
-    'creation_type': 'new',                     #options are ['new', 'load']
+    'creation_type': 'load',                     #options are ['new', 'load']
     'load_folder': 'latest_genomes',                          #folder to load from if applicable
     'parents_folder': 'latest_genomes',            #folder to save parents of each generation to (for use with repopulation, will be overwritten each time)
-    'total_generations': 1000,                   #number of generations to run for
+    'total_generations': 1500,                   #number of generations to run for
 
     #history properties
     'history_folder': 'history',            #folder to permanently save the best of each generation too

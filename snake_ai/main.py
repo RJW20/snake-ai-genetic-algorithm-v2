@@ -45,7 +45,8 @@ def main() -> None:
             population.players = pool.map(simulate, population.players, chunksize=1)
 
         #print some stats
-        print(f'\ngeneration: {population.current_generation}, champ\'s best score: {population.champ.best_score}, ' + 
+        print(f'\ngeneration: {population.current_generation}, champ\'s score: {population.champ.best_score}, ' + 
+              f'average score: {(sum(player.score for player in population.players) / len(population.players))}, ' + 
               f'best fitness: {round(population.champ.fitness)}, average fitness: {round(population.average_fitness)}, ', end = '')
 
         #add to history
@@ -53,7 +54,8 @@ def main() -> None:
 
         #remove the poorly perfoming players and report the improvements
         population.cull(parent_percentage)
-        print(f'average parent fitness: {round(population.average_fitness)}\n')
+        print(f'average parent fitness: {round(population.average_fitness)}, ' + 
+              f'average parent score: {(sum(player.score for player in population.players) / len(population.players))}\n')
 
         #save the parents
         population.save_parents(parents_folder)
