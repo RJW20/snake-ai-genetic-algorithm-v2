@@ -19,8 +19,6 @@ The fitness of the Snake is a function of how long it has survived (adjusted for
 ### Results:
 Snake is not a trivial game, but not too difficult that the Genetic Algorithm can't beat it. The first win came at generation 488, and after many more generations the Snake can beat the game with pretty much perfect consistency. Here is one such run:
 
-<video src="https://i.imgur.com/AfIwvSl.mp4" width="300" />
-
 However increasing the size of the grid beyond the 10x10 this Snake was trained on renders it completely unable to hunt down the apples, and the Snake just circles the edge (within 5 squares, where it knows in 10x10 is safe). One could potentially remedy this by using a more binary type of vision, that hence would work identically for all grid sizes.
 
 ## If you want to run it yourself
